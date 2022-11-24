@@ -5,14 +5,8 @@ import datetime
 import shutil
 import re
 import smtplib
-from ftplib import FTP
 
 
-def connect_to_FTP_server(server, username, password):
-    # domain name or server ip:
-    ftp = FTP(server)
-    ftp.login(username, password)
-    return ftp
 
 # partie contrôle date
 def test_date():
@@ -60,10 +54,7 @@ def sendAutoMail():
         smtpServer.send_message(msg, fromAddress, toAddress)
 
 
-#Lire le ftp
-ftp_server = connect_to_FTP_server('d73kw.ftp.infomaniak.com', 'd73kw_proj6_group11_win', 'UvmZdaW975a8' )
-ftp_server.cwd("/6312_Python_2022/Proj6_Group11_Win")
-print(ftp_server.dir())
+
 
 # partie dézipper
 target = 'Packet.zip' #indique quel fichier doit être dézipper
