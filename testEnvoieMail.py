@@ -5,8 +5,14 @@ import datetime
 import shutil
 import re
 import smtplib
+from ftplib import FTP
 
 
+def connect_to_FTP_server(server, username, password):
+    # domain name or server ip:
+    ftp = FTP(server)
+    ftp.login(username, password)
+    return ftp
 
 # partie contrôle date
 def test_date():
@@ -54,7 +60,10 @@ def sendAutoMail():
         smtpServer.send_message(msg, fromAddress, toAddress)
 
 
-
+#Lire le ftp
+ftp_server = connect_to_FTP_server('d73kw.ftp.infomaniak.com', 'd73kw_proj6_group11_win', 'UvmZdaW975a8' )
+ftp_server.cwd("/6312_Python_2022/Proj6_Group11_Win")
+print(ftp_server.dir())
 
 # partie dézipper
 target = 'Packet.zip' #indique quel fichier doit être dézipper
@@ -80,8 +89,6 @@ else:
 
 test_date()
 
-# decode bse64
-
 
 # sélectionne le texte du fichier depuis le server ftp
 text = ""
@@ -90,9 +97,8 @@ for i in range(3, data.__len__()):  # de la ligne 2 jusqu'à le total du texte
 
 
 if testMail != 0 or test_date() != 0:
-    # Déplacer un fichier du répertoire rep1 vers rep2
-    shutil.move("Packet.zip", "Echec")
-    shutil.rmtree('FichierExtrait')
+    #supprime fichier zip
+    shutil.rmtree('Packet.zip')
 
 else:
     textTransformer = transformCap(txt=text)#transforme le texte selectionner
