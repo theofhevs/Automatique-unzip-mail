@@ -14,14 +14,14 @@ après chaque utilisation sinon le programme ne trouvera pas son emplacement.
 
 Warning #2 : Ne pas oublier de télécharger le fichier JSON "Settings" afin d'avoir les accès au serveur FTP ainsi qu'à l'adresse mail.
 
-Warning #3 : Pour toute modification concernant le texte, l'adresse mail ou encore la date d'envoie, il faudra directement modifier
+Warning #3 : Pour toute modification concernant le texte, l'adresse mail ou encore la date d'envoi, il faudra directement modifier
 ces éléments dans le fichier.txt.
 
-Warning #4 : Afin que la mail soit envoyé à une date précise, n'oubliez pas de laissé le script ouvert jusqu'à ce que le programme ait terminé.
+Warning #4 : Afin que la mail soit envoyé à une date précise, n'oubliez pas de laisser le script ouvert jusqu'à ce que le programme ait terminé.
 
 
 Commit :
 
 L'ensemble des commit concerne le projet réparti en petit bout de code. 
-L'assemblage de toute les parties à directement était réalisé par tous les membres du groupe grâce à la fonctionnalité "code with me"
-disponible depuis l'éditeur "Pycharm". Ceci explique pourquoi nous n'avons pas beaucoup utilisé les commandes proposées par Git.
+L'assemblage de toute les parties à directement été réalisé par tous les membres du groupe grâce à la fonctionnalité "code with me"
+disponible depuis l'éditeur "Pycharm". Ceci explique pourquoi nous n'avons pas un nombre important de commit.
