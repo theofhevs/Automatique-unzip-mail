@@ -44,7 +44,7 @@ def transform_cap_upper(txt):
     return txt.upper()
 
 
- # création de la methode pour remplacer des lettres
+# création de la methode pour remplacer des lettres
 def remove_letter(txt, c):
     return txt.replace(c, "")
 
@@ -107,7 +107,7 @@ def send_mail_at_specific_time():
 # Fin des méthodes
 
 
-#creation de la variable pour les identifiant du fichier.JSON
+# creation de la variable pour les identifiant du fichier.JSON
 settings = read_settings()
 
 
@@ -140,7 +140,7 @@ with open("FichierExtrait/mail.txt", "r") as f:
 # partie vérification mail
 address_to_verify = data[0].removesuffix('\n')
 object = data[1].removesuffix('\n')
-# format des mails, : "[_a-z0-9-]+(\.[_a-z0-9-]+)" format de caractère obligatoire pour le mail
+# utilisation du regex suivant afin d'avoir le bon format pour les mails : "[_a-z0-9-]+(\.[_a-z0-9-]+)" format de caractère obligatoire pour le mail
 match = re.match('^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$', address_to_verify)
 
 
@@ -170,8 +170,6 @@ if test_mail and test_date():
     # le chemin de destination avec le nom du fichier
     print(ftp.sendcmd("RNTO ./Succes/Packet.zip"))
     # supprimer fichier zip et "FichierExtrait"
-
-
 else:
     # chemin du ftp
     ftp.cwd("/6312_Python_2022/Proj6_Group11_Win")
